@@ -1,14 +1,12 @@
 import React from 'react'
 import { images } from './constants'
-
 import { motion } from 'framer-motion'
-
-
 import './App.css'
 
 var today = new Date() 
 
 class App extends React.Component {
+  
 
 
 constructor(props) {
