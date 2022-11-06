@@ -6,7 +6,12 @@ import './App.css'
 var today = new Date() 
 
 class App extends React.Component {
-  
+    /*
+  Mounting order: 
+  1. constructor()
+  2. render()
+  3. componentDidMount()
+  */
 
 
 constructor(props) {
@@ -27,20 +32,13 @@ buildList = (data) => {
   this.setState({list: data.dataseries})
 }
 
-async componentDidMount() {
-  let url = `http://www.7timer.info/bin/api.pl?lon=${this.state.location.long}&lat=${this.state.location.lat}&product=civillight&output=json`
-  // const tomorrow = today
- 
-  fetch(url)
-  .then(response => response.json())
-  .then(this.buildList)
-  .catch()
-}
-
 
 
 
 render() {
+  if(!this.state.list){
+    return ("Faild to render the forecast")
+  }
 
   return (
     <div className="body">
@@ -97,6 +95,17 @@ render() {
     </div>
   );
 }
+
+async componentDidMount() {
+  let url = `http://www.7timer.info/bin/api.pl?lon=${this.state.location.long}&lat=${this.state.location.lat}&product=civillight&output=json`
+  // const tomorrow = today
+ 
+  fetch(url)
+  .then(response => response.json())
+  .then(this.buildList)
+  .catch()
+}
+
 }
 
 // ReactDOM.render(<App />, document.querySelector("#app"));
