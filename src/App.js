@@ -8,7 +8,7 @@ var today = new Date()
 class App extends React.Component {
   
 
-  
+
 constructor(props) {
   super();
   this.state = {
@@ -45,7 +45,7 @@ render() {
   return (
     <div className="body">
       <div className='header'>
-      <h5>{today.toLocaleDateString('en-us', { weekday:"long", month: 'short', day: 'numeric'})}</h5>
+      <h5> {today.toLocaleDateString('en-us', { weekday:"long", month: 'short', day: 'numeric'})}</h5>
         <h2>The Banff Weather Guide</h2>
         <h4>Banff & Lake Louise Tourism</h4>
         <a href='https://www.banfflakelouise.com/trip-planning/weather-forecast' target='blank'>
