@@ -7,8 +7,6 @@ var today = new Date()
 
 class App extends React.Component {
   
-
-
 constructor(props) {
   super();
   this.state = {
