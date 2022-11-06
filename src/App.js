@@ -68,7 +68,8 @@ render() {
                 <p className='temp'>MAX</p>
                 <p className="minTemp">{item.temp2m.min}&deg;C</p>
                 <p className="minTemp">Min Temp</p>
-                <p className="description">{item.weather}</p>
+
+                <p className="description">{ item.weather }</p>
               </div>
 
               ))}   
