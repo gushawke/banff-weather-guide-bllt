@@ -48,7 +48,7 @@ render() {
       <h5> {today.toLocaleDateString('en-us', { weekday:"long", month: 'short', day: 'numeric'})}</h5>
         <h2>The Banff Weather Guide</h2>
         <h4>Banff & Lake Louise Tourism</h4>
-        <a href='https://www.banfflakelouise.com/trip-planning/weather-forecast' target='blank'>
+        <a href='https://www.banfflakelouise.com/trip-planning/weather-forecast' title="Full week forecast" target='blank'>
         <img className='responsive'  src={images.banff} alt='logo'></img>
         </a>
       </div>
